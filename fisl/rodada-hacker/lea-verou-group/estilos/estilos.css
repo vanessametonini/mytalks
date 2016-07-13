@@ -1,0 +1,34 @@
+/*
+ Redefinindo margens e espacamentos
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4{
+	font-family: verdana;
+}
+
+section {
+	display: table;
+	width: 100%;
+}
+
+nav{
+	background: #bada55;
+	display: table-cell;
+	width: 20%;
+}
+
+article{
+	background: #aaa;
+	display: table-cell;
+	width: 80%;
+
+}
+
+p{
+	background: rgba(234,200,019,0.5);
+}

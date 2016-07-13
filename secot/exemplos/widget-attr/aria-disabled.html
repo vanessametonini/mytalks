@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ARIA Example: Checkbox. Widget attribute</title>
+  <style type="text/css">
+    div.codebox {
+      background-color: #E0E0E0;
+      color: black;
+      font-family: monospace;
+      padding: .5em;
+      margin: .5em;
+      border: black medium solid;
+    }
+
+ div{
+      background: #bada55;
+      border-radius: 8px;
+      margin: 10px;
+      padding:  10px 20px;
+      font-size: 120%;
+      cursor: pointer;
+    }
+
+	h2.nav {
+	  position: absolute;
+	  left: -200em;
+	  top: -20em;
+	}
+
+	ul.nav {
+	  margin: 0;
+	  padding: 0;
+	}
+
+	ul.nav li {
+	  display: inline;
+	  list-style: none;
+	  padding-right: 1em;
+	}
+
+
+    ul.checkboxes {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.checkboxes li    {
+        padding: 0; 
+        margin: 0;
+        margin-left: .5em;
+        list-style: none;
+    padding-left: .5em;
+    }
+
+    ul.checkboxes li img    {
+        padding: 0; 
+        margin: 0;
+    margin-right: .5em;
+    }
+
+    ul.checkboxes li[aria-checked="true"]:focus,
+  ul.checkboxes li[aria-checked="true"]:active {
+    border: black 1px solid;
+  font-weight: bold;
+  width: 6em;
+    }
+
+    ul.checkboxes li[aria-checked="false"]:focus,
+  ul.checkboxes li[aria-checked="false"]:active {
+    border: black 1px solid;
+    font-weight: bold;
+  width: 6em
+  } 
+
+    .hidden{
+        display:none;
+    }
+
+    .left{
+      width: 40%;
+      float: left;
+    }
+
+    .right{
+      width: 40%;
+      float: right;
+    }
+
+.app{
+  overflow: hidden;
+}
+  </style>
+  <script type="text/JavaScript" src="scripts.js"></script>
+</head>
+<body onload="initApp()">
+<h1>Exemplo atributos do tipo widget</h1>
+<div role="application" class="app">
+  <script type="text/javascript">
+
+    var lettuce = new Checkbox("cb1");
+    widgets.add(lettuce);
+
+    var tomato  = new Checkbox("cb2");
+    widgets.add(tomato);
+
+    var mustard = new Checkbox("cb3");
+    widgets.add(mustard);
+
+    var sprouts = new Checkbox("cb4");
+    widgets.add(sprouts);
+  </script>
+<div class="left">
+<h3 id="cond">Igredientes do sanduíche</h3>
+<ul class="checkboxes" role="group" aria-labelledby="cond">
+  <li id="cb1" role="checkbox" aria-checked="true" aria-describedby="desc1" title="Romaine Lettuce" tabindex="0" class="">
+      <img src="images/checked.gif" alt="">Alface
+  </li>
+
+  <li id="cb2" role="checkbox" aria-checked="true" title="Large Red Tomatoes" tabindex="0" class="">
+      <img src="images/checked.gif" alt="">Tomate
+  </li>
+
+  <li id="cb3" role="checkbox" aria-checked="true" title="Dijion Mustard" tabindex="0" class="">
+      <img src="images/checked.gif" alt="">Mostarda
+  </li>
+
+  <li id="cb4" role="checkbox" aria-checked="true" title="Queijo" tabindex="0" class="">
+      <img src="images/checked.gif" alt="">Queijo
+  </li>
+</ul>
+<p id="desc1" class="hidden">Not your average lettuce, you should really try it!</p>
+</div>
+<!-- <h2>Keyboard Shortcuts</h2>
+<ul>
+    <li>Tab: move between checkbox items.</li>
+    <li>Space: toggle <code>aria-checked</code> state of currently focused checkbox.</li>
+</ul> -->
+<div class="right">
+<h3>ARIA Roles and Properties</h3>
+<ul>
+    <li>Roles:
+	<ul>
+	<li><code>role="application"</code></li>
+    <li><code>role="checkbox"</code></li>
+	<li><code>role="group"</code></li>
+	<li><code>role="description"</code></li>
+	</ul>
+	</li>
+    <li>States and properties:
+        <ul>
+            <li><code>aria-checked</code></li>
+            <li><code>aria-describedby</code></li>
+            <li><code>aria-labelledby</code></li>
+        </ul>
+    </li>
+</ul>
+</div>
+</div>
+</body>
+</html>

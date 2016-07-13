@@ -1,0 +1,65 @@
+.slide {
+
+	h2 {
+  		color: rgb(35,35,35);
+	}
+
+	&.shout.cover h2 {
+		line-height: 100px;
+		font-size: 100px;
+  		margin: 0;
+		top: 60%;
+		transform: none;
+	}
+
+	&.cover {
+
+		> div {
+			background: #fff url(../images/capa.png) no-repeat 50% -4.7em;
+			background-size: 100% auto;
+		}
+	}
+
+}
+
+.tim div {
+	background: url(../images/tim-bl.jpg) no-repeat 50% 50%;
+	background-size: 120% auto;
+}
+
+.tim div h2{
+	color: yellow;
+	text-shadow: 1px 3px 0px #000;
+	margin-top: 50%;
+}
+
+.internet {
+	background: url(../images/internet.jpg) no-repeat 50% 50%;
+}
+
+
+.internet h2{
+	color: yellow;
+	text-shadow: 1px 3px 0px #000;
+	margin-top: 50%;
+	background-color: rgba(255,255,255,0.7);
+	padding: 10px 0 20px;
+}
+
+.internet-big div {
+	background: url(../images/internet-forbes.jpg) no-repeat 50% 50%;
+	h2 {
+		color: #fff;
+		text-shadow: 4px 5px 0px #000;
+	}
+}
+
+#infografico {
+	position: absolute;
+}
+
+.vanessa div {
+	background: url(../images/vanessa_2.jpg) no-repeat 0% 110px;
+	background-size: 30% auto;
+	padding-left: 17em;
+}

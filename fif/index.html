@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>HTML5+WAI-ARIA: por uma Open Web!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="styles/screen.css">
+	<link rel="stylesheet" href="styles/fif.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>HTML5+WAI-ARIA: por uma Open Web!</h1>
+		<p>Vanessa Me Tonini, <a href="http://www.w3c.br">W3C Brasil</a></p>
+	</header>
+	<section class="slide cover shout">
+		<div>
+			<h2>HTML5+<span>WAI</span>ARIA: <br><em> por uma Open Web!</em></h2>
+			<p>Vanessa Me Tonini <a href="http://www.w3c.br" class="w3cbr"><img src="images/w3cbr-white.svg" alt="W3C Brasil"></a></p>
+			<div class="gloss"></div>
+		</div>
+	</section>
+	<section class="slide mini-bio">
+		<div class="fundo"></div>
+		<div>
+			<h2>Eu sou...</h2>
+			<ul>
+				<li>Desenvolvedora front-end desde 2007</li>
+				<li class="next">Tecnóloga em sistemas para Internet pela UNIVALI</li>
+				<li class="next">Especialista em desenvolvimento Web pela UTFPR</li>
+				<li class="next">Hoje trabalho em projetos de fomento a acessibilidade Web e Open Web no W3C Brasil</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<div class="w3cbr">
+			<br><br>
+			<img src="images/w3c-nic-cgi.png" alt="W3C Brasil, NIC.br, CGI.br" style="margin-left: -30px; width: 100%;" aria-describedby="w3cbr">
+		</div>
+		<p class="hidden-notes" id="w3cbr">
+			No Brasil, o W3C é uma iniciativa do Comitê Gestor da Internet, através do Núcleo de informação e coordenação do .br - Nic.br
+		</p>
+	</section>
+	<section class="slide webbr">
+		<div>
+			<p class="data high">25 e 26 de setembro <br> São Paulo - SP</p>
+			<div class="desconto">
+				<img src="images/logo-fif.png" alt="Front in Fortaleza" class="next">
+				<strong class="next">+ 30% desconto</strong>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<div class="openweb"></div>
+	</section>
+	<section class="slide owp">
+		<div class="openweb"></div>
+		<div>
+			<h2 lang="en">The Open Web Platform!</h2>
+			<p class="next high" style="font-size: 2em">
+				A plataforma aberta da Web é uma coleção de tecnologias abertas <span lang="en">(royalty-free)</span> no qual já são utilizadas para viabilizar a Web.
+			</p>
+		</div>
+	</section>
+	<section class="slide owp">
+		<div class="openweb"></div>
+		<div>
+			<h2 lang="en">The Open Web Platform!</h2>
+				<br>
+			<p class="high" style="font-size: 2em">
+				Uma plataforma feita <br> por muitos, para todos! <br> &#9829;
+			</p>
+		</div>
+	</section>
+	<section class="slide he">
+		<div>
+			<h2>... e todos viveram felizes para sempre!</h2>
+		</div>
+	</section>
+	<section class="slide grumpy">
+		<div>
+			<h2>NO!</h2>
+		</div>
+	</section>
+	<section class="slide willy">
+		<div>
+			<h2>E o que você está fazendo por uma Web aberta e para todos?</h2>
+		</div>
+	</section>
+	<section class="slide shout wa right">
+			<div class="">
+				<h2><em>WAI</em>ARIA</h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div class="wai">
+				<h2 lang="en">Web Accessibility Initiative</h2>
+				<p class="mediumFont">Desde 1998 o <strong>Grupo de Iniciativa de Acessibilidade (WAI)</strong>  do W3C participa da construção dos padrões para que sejam acessíveis. A primeira grande especificação criada foi o WCAG 1.0 em 1998.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div class="wai">
+				<h2 lang="en">Web Accessibility Initiative</h2>
+				<p class="mediumFont">O <abbr title="Web Content Accessibility Guidelines" lang="en">WCAG</abbr> hoje está em sua versão 2.0, onde uma de suas características é que nesta versão o documento ficou mais compreensível não só para desenvolvedores mas também para gestores e interessados no assunto.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">WCAG: princípios</h2>
+				<ul>
+					<li class="next">
+						Princípio 1: Perceptível <br>
+						O conteúdo e a interface devem ser perceptiveis ao usuário. Não pode estar invisível para todos os seus sentidos.
+					</li>
+					<li class="next">
+						Princípio 2: Operável <br>
+						O usuário deve ser capaz de operar a interface, ela não deve ir além da capacidade de operação do usuário.
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">WCAG: princípios</h2>
+				<ul>
+					<li>
+						Princípio 3: Compreensível <br>
+						O usuário deve ser capaz de compreender a interface eo conteúdo. Não deve ir além da capacidade de compreender do usuário.
+					</li>
+					<li class="next">
+						Princípio 4: Robusto <br>
+						O conteúdo deve ser robusto o suficiente para ser exibido de forma concisa por navegadores e tecnologias assistivas.
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div class="wai">
+				<h2>WAI-ARIA</h2>
+				<p class="mediumFont">Em 2008, o <abbr title="Web Accessibility Initiative" lang="en">WAI</abbr> criou uma especificação para extender os recursos de acessibilidade na Web, especialmente do HTML5 e suas aplicações ricas.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div class="wai-aria" role="img" aria-describedby="wai-aria-spec">
+				<p class="hidden-notes" id="wai-aria-spec">O WAI-ARIA se tornou uma recomendação W3C em março de 2014.</p>
+				<div class="red-box"></div>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Accessible Rich Internet Applications</h2>
+				<p class="mediumFont"><br>Contribui especialmente com <mark>conteúdo dinâmico</mark> e <mark>controles avançados de interface </mark> para usuário desenvolvidos com <mark>HTML5, Javascript e tecnologias relacionadas</mark>.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Diferença entre o WCAG e o ARIA</h2>
+				<ul style="font-size: 130%;">
+					<li class="next">As <a href="http://www.w3.org/TR/WCAG20/">WCAG</a> <mark>utilizam a semântica</mark> do HTML para tornar o conteúdo acessível.</li>
+					<li class="next">O <a href="http://www.w3.org/TR/wai-aria/complete">WAI-ARIA</a> é uma especificação de <mark>atributos</mark> que <mark>muda a semântica</mark> dos elementos HTML para tornar o conteúdo acessível.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2>Como utilizar o WAI-ARIA?</h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div style="font-size: 120%;">
+				<br>
+				<p class="mediumFont">O WAI-ARIA funciona como uma extensão ou framework do HTML5, trabalhando apenas com adição e manipulação dos seus <strong>atributos</strong> nas <strong>tags</strong> do HTML.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<p>Estes atributos podem ser do tipo: </p>
+				<div class="wa-container">
+					<h3>WAI-ARIA</h3>
+					<div class="role next"><code><mark><strong lang="en">role</strong></mark></code></div>
+					<div class="state next"><code><mark><strong lang="en">state</strong></mark></code></div>
+					<div class="property next"><code><mark><strong lang="en">property</strong></mark></code></div>
+				</div>
+			</div>
+		</section>
+		<section class="slide">
+	<pre>
+		<code>
+		&lt;form <mark>role="search"</mark>&gt;
+			&lt;input type="search" role="combobox"
+				<mark>aria-autocomplete="list" aria-owns="sel"</mark>&gt;
+			&lt;select id="sel"&gt;
+				&lt;option <mark>aria-selected="true"</mark>&gt;Internet&lt;/option&gt;
+				&lt;option <mark>aria-selected="false"</mark>&gt;Web&lt;/option&gt;
+				&lt;option <mark>aria-selected="false"</mark>&gt;Network&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;input type="submit"&gt;
+		&lt;/form&gt;
+		</code>
+	</pre>
+		</section>
+		<section class="slide shout right">
+			<div>
+				<h2 lang="en">roles categorization</h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Atributo</h2>
+				<p class="hidden-notes" id="aria-role-desc">
+					o atributo role faz parte do HTML, e seus valores são especificados pelo WAI-ARIA.
+				</p>
+				<p class="next" style="text-align: center;" >
+					<code style="font-size: 200%;">
+						role=""
+					</code>
+				</p>
+				<div class="next role-spec" aria-describedby="aria-role-desc">
+					<div class="red-box"></div>
+				</div>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en" >Roles categorization</h2>
+				<p class="hidden-notes" id="roles-categ">
+					Os valores para este atributo estão categorizados como:
+				</p>
+				<ul aria-describedby="roles-categ">
+					<li lang="en" class="next">Abstract roles</li>
+					<li lang="en" class="next">Widget roles</li>
+					<li lang="en" class="next">Document structure roles</li>
+					<li lang="en" class="next">Landmark roles</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Abstract roles</h2>
+				<ul>
+					<li class="next">Propõem definir conceitos gerais para as funcionalidades;</li>
+					<li class="next"><strong>Não devem ser usados para conteúdo.</strong></li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Abstract roles (12)</h2>
+				<code class="aria-attr">
+				• command • composite • input <br>
+				• landmark • range • roletype <br>
+				• section • sectionhead • select <br>
+				• structure • widget • window</code>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Widget roles</h2>
+				<ul>
+					<li>Agem como <strong>componentes autônomos de interface</strong>;</li>
+					<li class="next">Ou como <strong>componentes compostos</strong>.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en" aria-describedby="wr-cc">Widget roles: componentes de compostos (9)</h2>
+				<p class="hidden-notes" id="wr-cc">Esses papéis tipicamente atuam como recipientes que gerenciam outros componentes de interfaces contidos</p>
+				<code class="aria-attr">
+					• combobox
+					• grid
+					• listbox
+					• menu <br>
+					• menubar
+					• radiogroup
+					• tablist <br>
+					• tree
+					• treegrid
+				</code>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Widget roles: componentes de interface (25)</h2>
+				<code>
+					• alert
+					• alertdialog
+					• button
+					• checkbox
+					• dialog
+					• gridcell
+					• link
+					• log
+					• marquee
+					• menuitem <br>
+					• menuitemcheckbox
+					• menuitemradio
+					• option <br>
+					• progressbar
+					• radio
+					• scrollbar
+					• slider <br>
+					• spinbutton
+					• status
+					• tab
+					• tabpanel
+					• textbox <br>
+					• timer
+					• tooltip
+					• treeitem
+				</code>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2><a href="exemplos/widget-role/">exemplos</a></h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Document structure roles</h2>
+				<ul>
+					<li>Descrevem as estruturas que organizam o conteúdo;</li>
+					<li class="next">Estrutura com conteúdo geralmente não tem interatividade.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Document structure roles (18)</h2>
+				<code class="aria-attr">
+					• article
+					• columnheader <br>
+					• definition
+					• directory
+					• document <br>
+					• group
+					• heading
+					• img
+					• list <br>
+					• listitem
+					• math
+					• note <br>
+					• presentation
+					• region
+					• row <br>
+					• rowheader
+					• separator
+					• toolbar
+				</code>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2><a href="exemplos/ds-role/img.html">exemplos</a></h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Landmark roles</h2>
+				<ul>
+					<li><strong>Pontos de referência</strong> de navegação;</li>
+					<li class="next">Mapeam partes do site/aplicação;</li>
+					<li class="next">Também substituí o antigo "pular para conteúdo".</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">Landmark roles (8)</h2>
+				<code class="aria-attr">
+					• application
+					• banner <br>
+					• complementary
+					• contentinfo
+					• form <br>
+					• main
+					• navigation
+					• search
+				</code>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2><a href="exemplos/landmark-role/index.htm">exemplos</a></h2>
+			</div>
+		</section>
+		<section class="slide shout right">
+			<h2 lang="en">states & properties</h2>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">States & Properties</h2>
+				<ul>
+					<li>Além dos "roles" existem atributos específicos do WAI-ARIA;</li>
+					<li class="next">Estes atributos podem ser utilizados em conjunto com o atributo <strong>role</strong>;</li>
+					<li class="next">Os atributos podem ser globais ou específicos.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 lang="en">States & Properties</h2>
+				<ul>
+					<li>Atributos de Widget (função);</li>
+					<li class="next">Atributos de Live Region (regiões dinâmicas);</li>
+					<li class="next">Atributos de Drag-and-Drop (arrastar e soltar);</li>
+					<li class="next">Atributos de Relationship (relacionamento).</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">Widget</span></h2>
+				<ul>
+					<li>Específicos para elementos de interface de usuário;	</li>
+					<li class="next">Ideal para GUIs e aplicações ricas;</li>
+					<li class="next">São utilizados para apoiar o <strong>role</strong> do tipo <strong>widget</strong>.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">Widget</span> (21)</h2>
+				<code>
+					• aria-autocomplete
+					<mark>• aria-checked (state)</mark>
+					<mark>• aria-disabled (state) *</mark>
+					<mark>• aria-expanded (state)</mark>
+					• aria-haspopup *
+					<mark>• aria-hidden (state) *</mark>
+					<mark>• aria-invalid (state) *</mark>
+					• aria-label *
+					• aria-level
+					• aria-multiline
+					• aria-multiselectable
+					• aria-orientation
+					<mark>• aria-pressed (state)</mark>
+					• aria-readonly
+					• aria-required
+					<mark>• aria-selected (state)</mark>
+					• aria-sort
+					• aria-valuemax
+					• aria-valuemin
+					• aria-valuenow
+					• aria-valuetext
+				</code>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2><a href="exemplos/widget-attr/aria-disabled.html">exemplos</a></h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">live region</span></h2>
+				<ul>
+					<li>Específicos para regiões de conteúdo dinâmico;</li>
+					<li class="next">Servem para indicar o local onde irá receber alterações de conteúdo;</li>
+					<li class="next">Habilitam as tecnologias assistivas a perceber se conteúdo da região demarcada foi modificado;</li>
+					<li class="next">Podem ser aplicados a qualquer elemento.</li>
+				</ul>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">live region</span> (4)</h2>
+				<code class="aria-attr">
+					• aria-atomic *
+					<mark>• aria-busy (state) *</mark>
+					• aria-live *
+					• aria-relevant *
+				</code>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2><a href="exemplos/liveregion-attr/live-regions.html">exemplos</a></h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">drag and drop</span> (2)</h2>
+				<p>Indicam informações sobre o estado dos elementos de interface que são do tipo arrastar e soltar.</p>
+				<code class="next aria-attr">
+					• aria-dropeffect * <br>
+					<mark>• aria-grabbed (state) *</mark>
+				</code>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">relationship</span></h2>
+				<p>Indicam relações ou associações entre elementos que não podem ser facilmente determinados a partir da estrutura do documento.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Atributos de <span lang="en">relationship</span> (8)</h2>
+				<code class="aria-attr">
+					• aria-activedescendant <br>
+					• aria-controls *
+					• aria-describedby *
+					• aria-flowto *
+					• aria-labelledby *
+					• aria-owns *
+					• aria-posinset <br>
+					• aria-setsize
+				</code>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2><a href="exemplos/relationship-attr/">exemplos</a></h2>
+			</div>
+		</section>
+		<section class="slide shout up">
+			<div>
+				<h2>Porquê acessibilidade na Web?</h2>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 style="text-align: center; font-size: 340%;">1 bilhão de pessoas...</h2>
+				<div class="next">
+					<p style="text-align: center; font-size: 180%;">
+						... com deficiência no mundo.
+					</p>
+					<br><br>
+					<p style="color: #999;">Estimativa aproximada. Fonte: ONU.</p>
+				</div>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2 style="text-align: center; font-size: 300%;">45.623.910 de pessoas </h2>
+				<div class="next">
+					<p style="text-align: center; font-size: 180%;">
+						... com deficiência no Brasil. 
+						<br><small>24,9% da população.</small>
+					</p>
+					<p style="color: #999;">Fonte: Censo 2010.</p>
+				</div>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Mais de 500 mil, não conseguem exergar de modo algum, no Brasil.</h2>
+				<p style="color: #999;">Fonte: Censo 2010.</p>
+			</div>
+		</section>
+		<section class="slide cartilha">
+			<div>
+				<p><a href="http://acessibilidade.w3c.br/cartilha/fasciculo1/">Cartilha de Acessibilidade na Web do W3C Brasil</a></p>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h2>Quem se beneficía com isto?</h2>
+				<p style="text-align: center">
+					<img src="images/capitulo3-item1-mulher-cega.png" height="100" width="140" alt="Uma mulher cega, utilizando um leitor de telas, pesquisa a restituição de imposto de renda no sítio da Receita Federal" title="Uma mulher cega, utilizando um leitor de telas, pesquisa a restituição de imposto de renda no sítio da Receita Federal" class="next">
+					<img src="images/capitulo3-item2-homem-cego-sem-bracos.png" height="100" width="140" alt="Um homem cego e sem braços procura sua ex-professora em um sistema de busca utilizando um programa de reconhecimento de voz para entrar comandos no computador e receber retorno a partir do leitor de telas;" title="Um homem cego e sem braços procura sua ex-professora em um sistema de busca utilizando um programa de reconhecimento de voz para entrar comandos no computador e receber retorno a partir do leitor de telas;" class="next">
+					<img src="images/capitulo3-item3-homem-paralisia-cerebral.png" height="100" width="140" alt="Um homem com paralisia cerebral, com grandes dificuldades motoras e que só utiliza um dedo para teclar, atualiza seu perfil em uma rede social;" title="Um homem com paralisia cerebral, com grandes dificuldades motoras e que só utiliza um dedo para teclar, atualiza seu perfil em uma rede social;" class="next">
+					<img src="images/capitulo3-item4-homem-deficiencia-motora.png" alt="Um homem com deficiência motora, que usa um mouse adaptado, faz compras em uma loja virtual;" title="Um homem com deficiência motora, que usa um mouse adaptado, faz compras em uma loja virtual;" class="next">
+					<img src="images/capitulo3-item5-jovem-tetraplegica.png" height="100" width="140" alt="Uma jovem tetraplégica, utilizando apenas um ponteiro na cabeça, procura informações sobre células-tronco em sítios especializados;" title="Uma jovem tetraplégica, utilizando apenas um ponteiro na cabeça, procura informações sobre células-tronco em sítios especializados;" class="next">
+					<img src="images/capitulo3-item10-jovem-deficiencia-auditiva.png" height="100" width="140" alt="Um jovem surdo ou com deficiência auditiva que faz um curso de inglês à distância." title="Um jovem surdo ou com deficiência auditiva que faz um curso de inglês à distância." class="next">
+					<img src="images/capitulo3-item12-casal-idosos.png" height="100" width="140" alt="Casal de idosos, já com alguma dificuldade para ler textos pequenos e que possui pouca experiência com a Internet, amplia o tamanho do texto para comprar passagens aéreas em promoção para visitarem o filho em outro estado;" title="Casal de idosos, já com alguma dificuldade para ler textos pequenos e que possui pouca experiência com a Internet, amplia o tamanho do texto para comprar passagens aéreas em promoção para visitarem o filho em outro estado;" class="next">
+					<img src="images/capitulo3-item13-crianca.png" height="100" width="140" alt="Criança, ainda com linguagem em desenvolvimento, procura um jogo na web em uma página com animações que identificam o jogo que ela procura;" title="Criança, ainda com linguagem em desenvolvimento, procura um jogo na web em uma página com animações que identificam o jogo que ela procura;"  class="next">
+					<br>
+					<span class="next high">+ + +</span>
+					<br>	
+				</p>
+				<p style="font-size: 12px; margin-top:-6em">Fonte: <a href="http://acessibilidade.w3c.br/cartilha/fasciculo1/">Cartilha de acessibilidade na Web</a>. Fascículo 1. W3C Brasil.</p>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2>Qualquer pessoa <br> em algum momento da vida <br> vai precisar de acessibilidade.</h2>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2>Tornar o mundo acessível é um compromisso de todos.</h2>
+			</div>
+		</section>
+		<section class="slide shout">
+			<div>
+				<h2 style="font-size:200%; text-align: center">
+					Obrigada! <br><br>
+					@vanessametonini @w3cbrasil <br><br>
+					<a href="mailto:vanessa@nic.br">vanessa@nic.br</a> <br><br>
+					Slides: <a href="http://bit.ly/1mG9yvI">http://bit.ly/1mG9yvI</a>
+				</h2>
+			</div>
+		</section>
+	<!-- section.slide>div>h2+p -->
+	<div class="progress"><div></div></div>
+	<script src="http://www.vanessametonini.com.br/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2013 Yours Truly, Famous Inc. -->
+</body>
+</html>

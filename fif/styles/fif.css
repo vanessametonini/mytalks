@@ -1,0 +1,274 @@
+.full .slide.shout.right h2{
+	opacity:0;
+	-webkit-transition:all 1s ease-out;
+	transition:all 1s ease-out;
+	-webkit-transform:translateX(-100%)translateY(-50%);
+	-ms-transform:translateX(-100%)translateY(-50%);
+	transform:translateX(-100%)translateY(-50%)
+}
+
+.full .slide.shout.right:target h2{
+	opacity:1;
+	-webkit-transform:translateX(0)translateY(-50%);
+	-ms-transform:translateX(0)translateY(-50%);
+	transform:translateX(0)translateY(-50%)
+}
+
+
+p,li {
+	font-size: 120%;
+	text-shadow: 1px 2px 0 #fff;
+	font-weight: bold;
+	line-height: 1.6;
+	padding-bottom: 1em;
+}
+
+p {
+	text-align: justify;
+}
+
+h1 + p {
+	text-shadow: 0 1px 1px #8D8E90
+}
+
+.mediumFont{
+	font-size: 160%;
+}
+
+.slide.shout h2 {
+	font-size: 80px;
+}
+
+.slide.cover{
+	background: #0092bf url(../images/html5-braille.png) no-repeat 10% 40%;
+	background-size: auto 60%;
+	position: relative;
+}
+
+.gloss{
+	position: absolute;
+	display: block;
+	width: 200%;
+	height: 92%;
+	top: -16em;
+	left: -20em;
+	z-index: 2;
+	opacity: 0.2;
+	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 110%);
+	visibility: visible;
+	-webkit-transform: rotate(-212deg);
+	-moz-transform:   rotate(-212deg);
+	-ms-transform:     rotate(-212deg);
+	-o-transform:      rotate(-212deg);
+	transform:         rotate(-212deg);
+}
+
+.slide.cover h2{
+	font-size: 3em;
+	display: block;
+	text-align: left;
+	padding: 0 0 5% 50%;
+	line-height: 1.2em;
+	text-shadow: 1px 2px 0 #0078ae;
+	font-weight: normal;
+	color: #fff;
+}
+
+.slide.cover h2 span{
+	color: silver;
+	font-style: italic;
+}
+.slide.cover p{
+	padding: 59% 30% 0 0;
+	text-align: right;
+	color: #fff;
+	text-shadow: 1px 2px 0 #0078ae;
+	font-weight: normal;
+	font-size: 90%;
+}
+
+.w3cbr{
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 56%;
+}
+
+.w3cbr img{
+	width: 500px;
+}
+
+.slide.cover p a{
+	color: #fff;
+}
+
+.slide:after{
+	background: none;
+}
+
+.slide ol li:before, .slide ul li:before {
+	color: #000;
+}
+
+.hidden-notes{
+	display: none;
+}
+
+.mini-bio .fundo{
+	background: url(../images/minibio.jpeg) no-repeat 0 50%;
+	background-size: 100%;
+	opacity: 0.2;
+}
+
+.webbr{
+	background: #000 url(../images/webbr.png) no-repeat 50% 0%;
+	color: #fff;
+}
+.webbr p {text-shadow: 1px 2px 0 #111 !important;}
+.webbr .data{
+	margin: 3.5em 0 0 -2em;
+	line-height: 1em;
+}
+.webbr .desconto img { margin-top: 1em;}
+.webbr .desconto strong{font-size: 3em;}
+
+.openweb{
+	background: url(../images/owp.png) no-repeat 50% 50%;
+	background-size: auto 100%;
+}
+
+.owp .openweb{
+	opacity: 0.2;
+}
+
+.high{
+	text-align: center;
+}
+
+.he {
+	background: url(../images/happyending.jpg) no-repeat 0 0;
+	background-size: 100% auto;
+}
+
+.grumpy {
+	background: url(../images/grumpycat.jpg) no-repeat 50% 50%;
+	background-size: 100% auto;
+}
+
+.grumpy h2{
+	font-size: 4em;
+	color: #ff0;
+	text-shadow: 1px 2px 0 #000;
+}
+
+.willy {
+	background: #000 url(../images/oq.gif) no-repeat 50% 50%;
+	background-size: 100% auto;
+}
+
+.willy h2{
+	margin-top: 3em;
+	font-size: 2.5em;
+	color: #ff0;
+	text-shadow: 1px 2px 0 #000;
+}
+
+/**/
+
+
+.wai-aria{
+	background: url(../images/wai-aria-spec.png) no-repeat 0 0;
+}
+
+.red-box{
+	border: 5px solid red;
+	position: absolute;
+}
+
+.wai-aria .red-box{
+	width: 405px;
+	height: 45px;
+	top: 30%;
+	left: 5%;
+}
+
+.wai h2{
+	background: url(../images/wai-temp.png) no-repeat 100% 0;
+}
+
+.role-spec{
+	background: url(../images/role-attr.png) no-repeat 100% 0;
+	background-size: 100%;
+	height: 100%;
+	margin-top: -150px;
+	width: 100%;
+}
+
+.role-spec .red-box{
+	width: 305px;
+	height: 30px;
+	top: 335px;
+	left: 15%;
+}
+
+.aria-attr{
+	font-size: 140%;
+}
+
+
+.wa-container{
+	background: #0092bf;
+	text-align: center;
+	border-radius: 20px;
+	padding: 20px 10px 30px;
+	overflow: hidden;
+}
+
+.wa-container h3{
+	color: #bbb;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.wa-container > div{
+	display: inline-block;
+}
+
+.wa-container > div code,
+.wa-container > div mark {
+	display: block;
+	padding: 20px;
+}
+
+.cartilha{
+	background: url(../images/capa-cartilha.png) no-repeat 50% 50%;
+}
+
+.cartilha p{
+	text-shadow: 1px 2px 0 #222;
+}
+
+.cartilha p {margin-top: -3em; text-align: center;	}
+
+.html5 h2{
+	background-image: url(../images/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png);
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	padding-bottom: 20px;
+}
+
+.shout.wa h2{
+	background-image: url(../images/nyan.gif);
+	background-repeat: no-repeat;
+	background-size: 110%;
+	font-size: 600%;
+	color: #333;
+	margin-top: -0.7em;
+	padding: 2.5em 2em 1.6em 1em;
+	box-sizing: border-box;
+	background-position: 0% 100%;
+}
+
+.shout.wa h2 em{
+	color: #0092bf;
+}

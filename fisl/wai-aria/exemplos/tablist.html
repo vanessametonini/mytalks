@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="PT-BR" >
+<HEAD >
+<TITLE>Exemplo de Tablist</TITLE>
+
+
+<style>
+
+body{
+  background:url(img-slides/sound.jpg) right top no-repeat #000;
+	font-family: Verdana, Arial;
+}
+h1, h2{
+  color: #FFF;
+
+}
+
+.tabpanel {
+  margin: 20px;
+  padding: 0;
+ 
+}
+.tablist {
+  margin: 0 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.tab {
+
+  margin: .2em 1px 0 0;
+  padding: 10px;
+  height: 1em;
+  font-weight: bold;
+ 
+
+  border: 1px solid black;
+	background:#dddddd;
+	border-top-left-radius:.5em;
+	border-top-right-radius:.5em;
+ 
+  float: left;
+  display: inline; /* IE float bug fix */
+}
+
+.panel {
+  clear: both;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 10px;
+  width: 300px;
+  background:#f2f2f2;
+	border-bottom-left-radius:.5em;
+	border-bottom-right-radius:.5em;
+  
+}
+
+ul.controlList {
+  list-style-type: none;
+}
+
+li[aria-selected='true'] {
+  color: black;
+  background-color: #fff;
+  border-bottom: 1px solid white;
+}
+
+div[aria-hidden='true'] {
+   display: none;
+}
+div[aria-hidden='false'] {
+   display:block;
+}
+
+.focus {
+  margin-top: 0;
+  height: 1.2em;
+}
+
+.hidden {display:none;}
+
+
+</style>
+
+
+<script src="scripts/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("li[role='tab']").click(function(){
+	$("li[role='tab']:not(this)").attr("aria-selected","false");
+ 	//$("li[role='tab']").attr("tabindex","-1");
+	$(this).attr("aria-selected","true");
+	//$(this).attr("tabindex","0");
+  var tabpanid= $(this).attr("aria-controls");
+   var tabpan = $("#"+tabpanid);
+$("div[role='tabpanel']:not(tabpan)").attr("aria-hidden","true");
+$("div[role='tabpanel']:not(tabpan)").addClass("hidden");
+
+tabpan.removeClass("hidden");
+//tabpan.className = "panel";
+tabpan.attr("aria-hidden","false");		
+  });
+  
+  //This adds keyboard accessibility by adding the enter key to the basic click event.
+  $("li[role='tab']").keydown(function(ev) {
+if (ev.which ==13) {
+$(this).click();
+}
+}); 
+ 
+  //This adds keyboard function that pressing an arrow left or arrow right from the tabs toggel the tabs. 
+   $("li[role='tab']").keydown(function(ev) {
+if ((ev.which ==39)||(ev.which ==37))  {
+var selected= $(this).attr("aria-selected");
+if  (selected =="true"){
+	$("li[aria-selected='false']").attr("aria-selected","true").focus() ;
+	$(this).attr("aria-selected","false");
+
+  var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+   var tabpan = $("#"+tabpanid);
+$("div[role='tabpanel']:not(tabpan)").attr("aria-hidden","true");
+$("div[role='tabpanel']:not(tabpan)").addClass("hidden");
+
+tabpan.attr("aria-hidden","false");
+tabpan.removeClass("hidden");
+//tabpan.className = "panel";
+
+
+}
+}
+}); 
+
+}); 
+</script>
+
+
+</HEAD>
+
+<BODY >
+
+
+<h1>Exemplo de tablist</h1>
+<h2>Sobre o nosso produto</h2>
+
+
+
+ <ul class="tablist" role="tablist">
+
+   <li id="tab1" class="tab" aria-controls="panel1" aria-selected="false" role="tab" tabindex="0">Precos</li>
+
+   <li id="tab2" class="tab" aria-controls="panel2" role="tab" aria-selected="true" tabindex="0">Recursos </li>
+
+   </ul>
+
+
+<div id="panel1" class="panel hidden" aria-labelledby="tab1" role="tabpanel" aria-hidden="true">
+
+ <h3 tabindex="0">Precos</h3>
+
+
+
+       Lista de precos 
+</div>
+
+<div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel" aria-hidden="false">
+
+  <h3 tabindex="0">Recursos</h3>
+
+Lista de recursos
+
+ </div>
+
+
+</BODY>
+</HTML>

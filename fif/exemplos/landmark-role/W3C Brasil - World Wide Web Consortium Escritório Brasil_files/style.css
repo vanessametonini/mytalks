@@ -1,0 +1,86 @@
+/* HeadlinesPlugin */
+
+/* debug 
+.headlinesRss, .headlinesChannel, .headlinesDate,
+.headlinesRight, .headlinesDescription,
+.headlinesLogo, .headlinesArticle, .headlinesTitle,
+.headlinesCreator, .headlinesSubject, .headlinesTeaser {
+  border:1px solid red;
+}
+*/
+
+.headlinesRss {
+  margin-right:10px;
+}
+
+.headlinesRss .date {
+ border-bottom: 1px solid #E2E2E2;
+ margin-bottom: 18px;
+ padding-bottom: 4px;
+}
+
+.headlinesChannel {
+  padding-bottom:5px;
+  margin-bottom:5px;
+}
+.headlinesChannel input {
+  display:none;
+}
+.headlinesChannel .headlinesDate {
+  margin:5px 0px;
+}
+.headlinesRight {
+  font-style:oblique;
+}
+.headlinesDescription {
+  font-size:1.1em;
+}
+.headlinesLogo {
+  float:right;
+  text-align:center;
+  overflow:hidden;
+  margin-left:5px;
+  margin-bottom:5px;
+}
+.headlinesLogo img {
+  border:0px;
+  margin:0px;
+  padding:0px;
+  margin-bottom:5px;
+}
+.headlinesArticle {
+  padding-top:5px;
+  padding-bottom:5px;
+  overflow:hidden;
+  margin-bottom:1.4em;
+}
+.headlinesArticle hr {
+  margin-top:2px;
+  margin-bottom:2px;
+}
+.headlinesArticle .headlinesTitle a {
+  font-size:1.4em;
+}
+.headlinesArticle .headlinesDate {
+  font-size:0.9em;
+  margin-left:0px;
+  white-space:nowrap;
+}
+.headlinesSubject,
+.headlinesCreator {
+  display:inline;
+  font-size:0.9em;
+}
+.headlinesTeaser {
+  margin-top:5px;
+  margin-left:30px;
+  text-align:justify;
+  overflow:hidden;
+}
+.headlinesTeaser img {
+  margin:5px;
+}
+.headlinesTeaser .natExternalLink:after {
+  content:"";
+  margin-left:0px;
+}

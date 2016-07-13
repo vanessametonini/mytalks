@@ -1,0 +1,47 @@
+/*!* Source in print-src.css */ @import url("/pub/Leiaute/WebModeloW3CCSS/realprint.css") print;body{font-family:"Helvetica Neue",Helvetica,Arial,Verdana,Geneva,sans-serif;color:#333;}
+*{background-image:none!important;}
+.theme_ext .icon{background-image:url('/pub/Leiaute/WebModeloW3CImagens/icon_sprite.png')!important;}
+#w3c_mast h1{border-right:none;height:80px;background:none;}
+.w3c_member #w3c_mast h1,.w3c_team #w3c_mast h1{background-color:#FFF;}
+#w3c_mast h1.logo a{background:#FFF url('/pub/Leiaute/WebModeloW3CImagens/w3c_home_nb') no-repeat 0 0!important;height:48px;width:150px;margin:20px 0 10px 20px;}
+.alt-logo{top:15px;}
+.w3c_mainCol{clear:left;}
+.lastUnit{overflow:visible;float:left;}
+.size1on2{width:49.9%!important;}
+.size1on3{width:33.25%!important;}
+.w3c_home .size1on3,.w3c_home .size2on3{width:100%!important;}
+.size2on3{width:66.65%!important;}
+.size1on4{width:24.95%!important;}
+.size3on4{width:74.95%!important;}
+#w3c_nav form input,.main_nav,.w3c_leftCol,#w3c_crumbs,.footerNav,#w3c_mast h1.logo img,.permalink,.header-link,.footer_top_nav,.footer_bottom_nav,.footer_follow_nav,.w3c_footer-nav{display:none!important;}
+#w3c_container{margin-right:0!important;}
+#w3c_mast{border:none;background-color:#FFF;}
+.line .size2on3{margin-left:0;}
+form.filter{display:none!important;}
+.w3c_javascript .expand_block h3{padding-left:20px;}
+.w3c_javascript .expand_block.closed .expand_description{display:block;}
+.w3c_javascript .expand_block .expand_section,.w3c_javascript .expand_block.closed .expand_section{background:none;padding-left:0;}
+.w3c_javascript .expand_block .expand_description,.w3c_javascript .expand_block .headline{background:transparent;}
+.hierarchy{padding-left:0;}
+.more-content{display:none;}
+.tr_view_nav{display:none!important;}
+#w3c_most-recently{height:auto!important;position:static!important;overflow:visible!important;}
+#w3c_most-recently li.event{display:block!important;position:static!important;height:auto!important;overflow:visible!important;}
+.w3c_rhs{display:none!important;}
+#w3c_content_body .line .unit{width:auto!important;}
+p.rec_support_data{display:none!important;}
+.w3c_mainCol,#w3c_footer-inner,#w3c_crumbs_frame{border-left:none;padding:0;}
+#w3c_footer{padding-left:0;}
+*{overflow:visible!important;}
+.line:after,.w3c_mainCol:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#w3c_footer{padding-right:0;}
+#w3c_footer-inner{padding-left:0;}
+a:link,a:visited{border-bottom:none;}
+a:hover{border-bottom:2px solid #005A9C;}
+.secondary_nav a:link,.secondary_nav a:visited{border-bottom:2px solid #A8BFCF;padding-bottom:1px;}
+h2 a:link:after,h2 a:visited:after,h3 a:link:after,h3 a:visited:after,h4 a:link:after,h4 a:visited:after{content:none;}
+#w3c_nav form#region_form{display:none;}
+.w3c_events_talks{background-color:#fff;}
+.w3c_events_talks .date,#w3c_main li.vevent .date{border:1px solid #000;color:#000;}
+.w3c_events_talks .date .dtstart .year{color:#000;float:none;}
+.w3c_events_talks{background:none;}

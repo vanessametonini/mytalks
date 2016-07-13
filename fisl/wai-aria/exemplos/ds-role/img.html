@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Structure Role: img</title>
+	<style>
+		.foto{
+			background: url(w3clogo.png);
+			width:400px;
+			height:251px;
+			display:block;
+			border:3px solid white;
+		}
+
+		.foto:hover, img:hover{
+			border:3px solid blue;
+		}
+
+		img{
+			border:3px solid white;
+		}
+	</style>
+</head>
+<body>
+	<h1>Document Structure Role: <a href="http://www.w3.org/TR/wai-aria/complete#img">img</a></h1>
+	<article role="main">
+		<div class="foto" role="img" aria-label="Logo do W3C que está dentro do CSS"></div>
+		<img src="w3clogo.png" alt="Logo do W3C dentro do HTML">
+		<!-- <section>
+			<img src="urso.jpg" width="600" alt="Urso de pelúcia">
+			<br>
+			<img src="prendedores.jpg" width="600" alt="Prendedores de roupa">
+		</section> -->
+	</article>
+</body>
+</html>
