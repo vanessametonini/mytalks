@@ -30,6 +30,3 @@ Repository of talks given by me
 **Internet, Web?! O que são?**  
 [Repository](https://github.com/vanessametonini/mytalks/tree/master/ladytalks/internet-web)  
 [Public presentation](http://www.vanessametonini.com.br/ladytalks/internet-web/?full#1)  
-
-
-k,tjcgt,gcjtgfktgfltcgiy;gklyhv;y
