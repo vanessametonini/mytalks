@@ -1,0 +1,35 @@
+$azul: #00b9c3;
+$amarelo: #FBBB09;
+
+.cover div {
+	background: $azul;
+
+	h2 {
+	
+	}
+	// background: url(../images/fisl17.png) no-repeat 50% 50%;
+	// background-size: 120% auto;
+
+}
+
+
+.tim div {
+	background: url(../images/tim-bl.jpg) no-repeat 50% 50%;
+	background-size: 120% auto;
+}
+
+.tim div h2{
+	color: yellow;
+	text-shadow: 1px 3px 0px #000;
+	margin-top: 50%;
+}
+
+.internet {
+	background: url(../images/internet.jpg) no-repeat 50% 50%;
+}
+
+.internet h2{
+	color: yellow;
+	text-shadow: 1px 3px 0px #000;
+	margin-top: 50%;
+}
