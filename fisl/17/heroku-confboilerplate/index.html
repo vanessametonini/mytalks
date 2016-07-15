@@ -6,6 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="theme.css">
 </head>
 <body class="shower list">
 	<header class="caption">
@@ -14,31 +15,257 @@
 	</header>
 	<section class="slide" id="cover">
 		<h2>Faça o site do seu evento com Heroku + Conf-boilerplate</h2>
-		<p><a href="https://twitter.com/vanessametonini">Vanessa Me Tonini</a>, <a href="http://www.marialab.org">Marialab Hackerspace</a>.</p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
+		<p><a href="https://twitter.com/vanessametonini">Vanessa Me Tonini</a> <br> <a href="http://www.marialab.org">Marialab Hackerspace</a></p>
+		<div class="fisl-logo"><img src="pictures/fisl17.png" alt="FISL 17"></div>
 	</section>
+	<!-- section.slide>h2+p -->
+	<section class="slide">
+		<h2>@vanessametonini</h2>
+		<ul>
+			<li>Sou Agile Coach na <a href="http://www.lambda3.com.br/">Lambda3</a></li>
+			<li>Voluntária na <a href="http://marialab.org/">Marialab Hackerspace</a></li>
+			<li>Fui dev frontend por uns 7 anos</li>
+			<li>Tecnóloga em Sistemas para Internet UNIVALI 2011</li>
+			<li>Especialista em Desenvolvimento Web UTFPR 2014</li>
+			<li>MBA Engenharia de Software FIAP 2015</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Agenda</h2>
+		<ul>
+			<li>Apresentação do propósito</li>
+			<li>Requisitos para uma aplicação web</li>
+			<li>Hospedagem e infraestrutura</li>
+			<li>Heroku</li>
+			<li>Conf-boilerplate</li>
+			<li>Oficina Hands On!</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Propósito</h2>
+	</section>
+	<section class="slide">
+		<p class="shout">Hoje cada dia está mais popular comunidades organizarem eventos de tecnologia</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Fora os tradicionais eventos dentro das universidades e faculdades (semanas acadêmicas)</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Ficar dependendo apenas de redes fechadas como Facebook, ou não muito populares como o Lanyrd para divulgar o evento é muito ruim para a autonomia e identidade do evento</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Afinal a web não se resume (ou não deveria) em uma rede social privada.</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Todos nós sabemos que é importante sim o evento ter seu próprio site, isto dá mais segurança aos participantes, fora a flexibilidade de customização.</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Quem aqui já organizou algum evento, está organizando, ou pensa em organizar nos próximos meses?</p>
+	</section>
+	<section class="slide">
+		<p class="shout">O propósito desta oficina é passar pra vocês como eu resolvi a necessidade de criar o site de um evento, com baixo orçamento, e utilizando ferramentas e software livre.</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Requisitos para uma aplicação web</h2>
+	</section>
+	<section class="slide">
+		<h2>Para termos uma aplicação ou site na web precisamos de três coisas fundamentais:</h2>
+		<ol>
+			<li>Hospedagem/infraestrutura</li>
+			<li>A própria aplicação (código fonte)</li>
+			<li>Domínio (meusite.com.br)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Hospedagem e infraestrutura</h2>
+	</section>
+
+	<section class="slide">
+		<p>
+			Uma dor que nós desenvolvedores sempre passamos quando queremos fazer um projeto e publicá-lo na web é escolher a hospedagem com a infraestrutura ideal
+		</p>
+	</section>
+	<section class="slide">
+		<h2>E ai eu pergunto pra vocês quais são as soluções mais tradicionais? </h2>
+		<p>
+			<ul>
+				<li class="next">Locaweb?</li>
+				<li class="next">Kinghost?</li>
+				<li class="next">Servidor do amigue?</li>
+				<li class="next">servidor da facul?</li>
+				<li class="next">IaaS?</li>
+			</ul>
+		</p>
+	</section>
+	<section class="slide">
+		<ul>
+			<li>E preciso saber de infraestrutura para contratar isto?</li>
+			<li class="next">Ah mas minha aplicação tá em Node, tá em Ruby, tá em Python, comofas?</li>
+			<li class="next">E o banco de dados?</li>
+			<li class="next">Eita, mas só tenho R$30 :(</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<p class="shout">Então surgiu o PaaS == <br>Platform as Service == <br>Plataforma como Serviço</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Heroku</h2>
+	</section>
+
+	<section class="slide">
+		<p>
+			É um serviço cloud/nuvem, no qual entrega para o cliente um ambiente pronto para receber a aplicação.
+		</p>
+	</section>
+	<section class="slide">
+		<p>
+			Não é necessário entender de infraesturura para utilizar o serviço.
+		</p>
+	</section>
+	<section class="slide">
+		<p>
+			O Heroku surgiu com o propósito de facilitar a vida do desenvolvedor.
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Linguagens suportadas:</h2>
+		<p>
+			Node, Ruby, Java, PHP, Python, Go, Scala, Clojure
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Plano gratuito:</h2>
+		<p>
+			Ideal for experimenting with cloud applications in a limited sandbox.
+		</p>
+		<p>
+			<code>
+			SLEEPS AFTER 30 MINS OF INACTIVITY <br>
+			USES AN ACCOUNT-BASED POOL OF FREE DYNO HOURS <br>
+			CUSTOM DOMAINS <br>
+			512 MB RAM │ 1 web/1 worker
+			</code>
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Existem alternativas?</h2>
+		<p class="next">
+			RedHat OpenShift, AWS Elastic Beanstalk, Jelastic, CloudBees, e outros...
+		</p>
+	</section>
+
+
+	Conf Boilerplate
+
+	o projeto foi criado em 2012 pela BrazilJS Foundation, com o propósito ajudar aqueles que querem organizar conferências/eventos e não tem muito tempo para criar o site disso.
+
+	naquela época estava rolando um boom de eventos, principalmente os famosos "FrontIns"
+
+	é opensource (obviamente) e está o Github
+	https://github.com/braziljs/conf-boilerplate
+
+	Tecnologias:
+	Git e
+	Docpad, que é um gerador de estático feito em Nodejs
+
+	Video do Zeno https://www.youtube.com/watch?v=EI99oZI3nKY
+
+	Documentação em português
+	https://github.com/braziljs/conf-boilerplate/blob/master/README-pt.md
+
+
+Hora da mão na massa!!!
+
+	Downloads
+		Git
+		https://git-scm.com/downloads
+
+		Node
+		https://nodejs.org/en/
+
+		Docpad
+		http://docpad.org/docs/install
+
+		Heroku Toolbelt
+		https://toolbelt.heroku.com/
+
+		Seria legal você também criar conta no Github
+		Você deve criar uma conta no Heroku
+		Usuarios de Windows, 
+
+	Executar local
+
+		Forkar, e renomear para o nome do seu evento
+		Clonar no meu local
+		Vá para a pasta do projeto
+		$npm install 	para instalar as dependencias
+		$npm run watch	para executar local e assistir mudanças
+
+	Customizando meu site
+		docpad.js
+		overview na documentação
+		criar um tema novo
+		customizar o css
+
+	Deploy da aplicação 
+		Com Github Pages
+		npm run deploy
+
+	Heroku part
+
+		Procfile
+		web: docpad run
+
+		Conectar com github
+
+		Se o repositório não estiver no github,
+		você pode fazer via Heroku Toolbelt
+		heroku toolbelt instalado
+		//git remote add heroku <url>
+
+	Configurando o domínio personalizado
+		Addons Heroku
+		PointDNS
+
+
+		$ heroku addons
+
+		RegistroBR
+		DNS
+
+heroku domains --app mulheres-tech-day
+
+
+
+
+
+
+
+
+
+
+Requisitos da oficina
+Internet
+Git, NodeJS, Heroku Toolbelt
+Desejável
+
+
+
+
+Referências
+
+Video do Zeno https://www.youtube.com/watch?v=EI99oZI3nKY
+
+http://www.devmedia.com.br/primeiros-passos-em-paas-com-heroku/29465
+
+https://devcenter.heroku.com/articles/pointdns#provisioning-the-add-on
+
+https://devcenter.heroku.com/articles/custom-domains
+
+https://github.com/braziljs/conf-boilerplate/blob/master/README-pt.md
+
 	<section class="slide">
 		<h2>Shower key features</h2>
 		<ol>
@@ -134,11 +361,6 @@
 	<section class="slide" id="picture">
 		<h2>Pictures</h2>
 		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
 	</section>
 	<section class="slide">
 		<h2 class="shout shrink">You can even shout this way</h2>
@@ -161,15 +383,6 @@
 			<img src="pictures/logo.svg" alt="Shower logo">
 			<a href="https://github.com/shower/shower">See more on GitHub</a>
 		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
 	</section>
 	<p class="badge">
 		<a href="https://github.com/vanessametonini/mytalks/tree/master/fisl/17/heroku-confboilerplate">Fork me on GitHub</a>

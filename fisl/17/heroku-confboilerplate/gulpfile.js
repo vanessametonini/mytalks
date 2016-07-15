@@ -9,6 +9,9 @@ const sequence = require('run-sequence');
 const zip = require('gulp-zip');
 const pages = require('gulp-gh-pages');
 
+var watchLess = require('gulp-watch-less');
+var less = require('gulp-less');
+
 gulp.task('prepare', () => {
 
 	const shower = gulp.src([
@@ -93,6 +96,13 @@ gulp.task('publish', (callback) => {
 		'upload',
 		'clean', callback
 	)
+});
+
+gulp.task('default', function () {
+    return gulp.src('theme.less')
+        .pipe(watchLess('theme.less'))
+        .pipe(less())
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', () => {

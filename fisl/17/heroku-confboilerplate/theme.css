@@ -1,0 +1,54 @@
+#cover {
+  background: #00b9c3;
+  padding: 0;
+}
+#cover h2 {
+  color: #FFF;
+  font-size: 70px;
+  padding: 125px 100px 10px;
+  text-align: center;
+}
+#cover p {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #FFF;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 30px;
+}
+#cover p a {
+  color: white;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none !important;
+}
+.fisl-logo {
+  background: #fbbb09;
+  bottom: 0;
+  padding: 20px 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.slide h2 {
+  color: #e95c22;
+}
+.slide h2.shout.shrink {
+  color: #00b9c3;
+}
+.slide p.shout {
+  color: #e95c22;
+  font-size: 52px;
+  line-height: 70px;
+  padding: 0 80px;
+}
+#picture h2 {
+  color: #FFF;
+}
+#see-more h2 {
+  font-size: 100px;
+}
+#see-more img {
+  width: 0.72em;
+  height: 0.72em;
+}
