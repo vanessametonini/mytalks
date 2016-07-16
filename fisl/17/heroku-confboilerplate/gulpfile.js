@@ -9,8 +9,8 @@ const sequence = require('run-sequence');
 const zip = require('gulp-zip');
 const pages = require('gulp-gh-pages');
 
-var watchLess = require('gulp-watch-less');
-var less = require('gulp-less');
+//var watchLess = require('gulp-watch-less');
+//var less = require('gulp-less');
 
 gulp.task('prepare', () => {
 
@@ -98,12 +98,12 @@ gulp.task('publish', (callback) => {
 	)
 });
 
-gulp.task('default', function () {
-    return gulp.src('theme.less')
-        .pipe(watchLess('theme.less'))
-        .pipe(less())
-        .pipe(gulp.dest('dist'));
-});
+// gulp.task('default', function () {
+//     return gulp.src('theme.less')
+//         .pipe(watchLess('theme.less'))
+//         .pipe(less())
+//         .pipe(gulp.dest('dist'));
+// });
 
 gulp.task('clean', () => {
 	return del('prepared/**');
