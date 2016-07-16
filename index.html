@@ -6,6 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="theme.css">
 </head>
 <body class="shower list">
 	<header class="caption">
@@ -14,165 +15,318 @@
 	</header>
 	<section class="slide" id="cover">
 		<h2>Faça o site do seu evento com Heroku + Conf-boilerplate</h2>
-		<p><a href="https://twitter.com/vanessametonini">Vanessa Me Tonini</a>, <a href="http://www.marialab.org">Marialab Hackerspace</a>.</p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
+		<p><a href="https://twitter.com/vanessametonini">Vanessa Me Tonini</a> <br> <a href="http://www.marialab.org">Marialab Hackerspace</a></p>
+		<div class="fisl-logo"><img src="pictures/fisl17.png" alt="FISL 17"></div>
+	</section>
+	<!-- section.slide>h2+p -->
+	<section class="slide">
+		<h2>@vanessametonini</h2>
+		<ul>
+			<li>Sou Agile Coach na <a href="http://www.lambda3.com.br/">Lambda3</a></li>
+			<li>Voluntária na <a href="http://marialab.org/">Marialab Hackerspace</a></li>
+			<li>Fui dev frontend por uns 7 anos</li>
+			<li>Tecnóloga em Sistemas para Internet UNIVALI 2011</li>
+			<li>Especialista em Desenvolvimento Web UTFPR 2014</li>
+			<li>MBA Engenharia de Software FIAP 2015</li>
+		</ul>
 	</section>
 	<section class="slide">
-		<h2>Shower key features</h2>
+		<h2>Agenda</h2>
+		<ul>
+			<li>Apresentação do propósito</li>
+			<li>Requisitos para uma aplicação web</li>
+			<li>Hospedagem e infraestrutura</li>
+			<li>Heroku</li>
+			<li>Conf-boilerplate</li>
+			<li>Oficina Hands On!</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Propósito</h2>
+	</section>
+	<section class="slide">
+		<p class="shout">Hoje cada dia está mais popular comunidades organizarem eventos de tecnologia</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Fora os tradicionais eventos dentro das universidades e faculdades (semanas acadêmicas)</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Ficar dependendo apenas de redes fechadas como Facebook, ou não muito populares como o Lanyrd para divulgar o evento é muito ruim para a autonomia e identidade do evento</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Afinal a web não se resume (ou não deveria) em uma rede social privada.</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Todos nós sabemos que é importante sim o evento ter seu próprio site, isto dá mais segurança aos participantes, fora a flexibilidade de customização.</p>
+	</section>
+	<section class="slide">
+		<p class="shout">Quem aqui já organizou algum evento, está organizando, ou pensa em organizar nos próximos meses?</p>
+	</section>
+	<section class="slide">
+		<p class="shout">O propósito desta oficina é passar pra vocês como eu resolvi a necessidade de criar o site de um evento, com baixo orçamento, e utilizando ferramentas e software livre.</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Requisitos para uma aplicação web</h2>
+	</section>
+	<section class="slide">
+		<h2>Para termos uma aplicação ou site na web precisamos de três coisas fundamentais:</h2>
 		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
+			<li>Hospedagem/infraestrutura</li>
+			<li>A própria aplicação (código fonte)</li>
+			<li>Domínio (ex: meusite.com.br)</li>
 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Hospedagem e infraestrutura</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Hospedagem e infraestrutura</h2>
+		<p>
+			Uma dor que nós desenvolvedores sempre passamos quando queremos fazer um projeto e publicá-lo na web é escolher a hospedagem com a infraestrutura ideal
+		</p>
 	</section>
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>E ai eu pergunto pra vocês quais são as soluções mais tradicionais? </h2>
+		<p>
+			<ul>
+				<li class="next">Locaweb?</li>
+				<li class="next">Kinghost?</li>
+				<li class="next">Servidor do amigue?</li>
+				<li class="next">servidor da facul?</li>
+				<li class="next">IaaS?</li>
+			</ul>
+		</p>
 	</section>
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+		<ul>
+			<li>E preciso saber de infraestrutura para contratar isto?</li>
+			<li class="next">Ah mas minha aplicação tá em Node, tá em Ruby, tá em Python, comofas?</li>
+			<li class="next">E o banco de dados?</li>
+			<li class="next">Eita, mas só tenho R$30 :(</li>
+		</ul>
 	</section>
 	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
+		<p class="shout">Então surgiu o <br>PaaS <br>Platform as Service <br>Plataforma como Serviço</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Heroku</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Heroku</h2>
+		<p>
+			É um serviço cloud/nuvem, no qual entrega para o cliente um ambiente pronto para receber a aplicação.
+		</p>
+		<p class="next">
+			Não é necessário entender de infraesturura para utilizar o serviço.
+		</p>
+		<p class="next">
+			O Heroku surgiu com o propósito de facilitar a vida do desenvolvedor.
+		</p>
+		<p class="next">♥</p>
+	</section>
+	<section class="slide">
+		<h2>Linguagens suportadas:</h2>
+		<p>
+			<img src="pictures/heroku-langs.png" alt="Node, Ruby, Java, PHP, Python, Go, Scala, Clojure">
+		</p>
+		<p>Node, Ruby, Java, PHP, Python, Go, Scala, Clojure</p>
+	</section>
+	<section class="slide">
+		<h2>Plano gratuito:</h2>
+		<p>
+			Ideal for experimenting with cloud applications in a limited sandbox.
+		</p>
+		<p lang="en">
+			SLEEPS AFTER 30 MINS OF INACTIVITY <br>
+			USES AN ACCOUNT-BASED POOL OF FREE DYNO HOURS <br>
+			CUSTOM DOMAINS <br>
+			512 MB RAM │ 1 web/1 worker
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Existem alternativas?</h2>
+		<p class="next">
+			RedHat OpenShift, AWS Elastic Beanstalk, Jelastic, CloudBees, e outros...
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Conf Boilerplate</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Conf Boilerplate</h2>
+		<p>
+			o projeto foi criado em 2012 pela BrazilJS Foundation, com o propósito ajudar aqueles que querem organizar conferências/eventos e não tem muito tempo/recursos para investir
+		</p>
+		<p class="next">
+			naquela época estava rolando um boom de eventos, principalmente os famosos "FrontIns"
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Conf Boilerplate</h2>
+		<p>
+			é open source e está o Github <br>
+			<a href="https://github.com/braziljs/conf-boilerplate">https://github.com/braziljs/conf-boilerplate</a>
+		</p>
+		<p class="next">
+			Tecnologias: <br>
+			Git e Docpad, que é um gerador de estático feito em Nodejs
+		</p>
+		<p class="next">♥</p>
+	</section>
+
+	<section class="slide">
+		<h2>Conf Boilerplate</h2>
+			<iframe width="840" height="400" src="https://www.youtube.com/embed/EI99oZI3nKY" frameborder="0" allowfullscreen></iframe>
+	</section>
+	<section>
+		<h2>Conf Boilerplate</h2>
+		<p>
+			Documentação em português
+			<a href="https://github.com/braziljs/conf-boilerplate/blob/master/README-pt.md">https://github.com/braziljs/conf-boilerplate/blob/master/README-pt.md</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Hora da mão na massa!!!</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Downloads</h2>
+		<ul>
+			<li>
+				<strong>Git</strong>
+				<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>
 			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
+			<li>
+				<strong>Node</strong>
+				<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>
+			</li>
+			<li>
+				<strong>Heroku Toolbelt</strong>
+				<a href="https://toolbelt.heroku.com/">https://toolbelt.heroku.com/</a>
+			</li>
+			<li>
+				Seria legal você também criar conta no <a href="https://github.com/">Github</a>
+			</li>
+			<li>
+				Você deve criar uma conta no <a href="https://heroku.com/">Heroku</a>
+			</li>
+		</ul>
 	</section>
+
 	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-	<section class="slide">
-		<h2>Inner navigation</h2>
+		<h2>Executar local</h2>
 		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
+			<li>Forkar, e renomear para o nome do seu evento</li>
+			<li class="next">Clonar do meu local</li>
+			<li class="next">Vá para a pasta do projeto</li>
+			<li class="next"><code>npm install</code> 	para instalar as dependencias</li>
+			<li class="next"><code>npm run watch</code> para executar local e assistir mudanças</li>
 		</ol>
 	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+
+	<section class="slide">
+		<h2>Customizando meu site</h2>
+		<ol>
+			<li>docpad.js</li>
+			<li class="next">overview na documentação</li>
+			<li class="next">criar um tema novo</li>
+			<li class="next">customizar o css</li>
+		</ol>
 	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+
+	<section class="slide">
+		<h2 class="shout shrink">Deploy!</h2>
 	</section>
+
+	<section class="slide">
+		<h2>Com Github Pages</h2>
+		<p><code>npm run deploy</code></p>
+		<p class="next">
+			https://myuser.github.io/myrepo/
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Com Heroku</h2>
+		<p>Criar arquivo com o nome <code>Procfile</code> (sem extensão)</p>
+		<p class="next">
+			conteúdo do arquivo: <br>
+			<code>web: docpad run</code>
+		</p>
+		<ol>
+			<li class="next">No site do Heroku criar app</li>
+			<li class="next">Conectar com github</li>
+			<li class="next">
+				https://myapp.herokuapp.com
+			</li>
+		</ol>
+		<p>
+	</section>
+
+	<section class="slide">
+		<h2>Heroku, outro cenário</h2>
+		<p>Se o repositório não estiver no Github, porém estiver num repositório Git (Bitbucket/Gitlab/VSTS) você pode fazer via <strong>Heroku Toolbelt</strong></p>
+
+		<p class="next">
+			No Heroku Toolbelt você se autentica em sua conta via terminal e consegue realizar diversas configurações em seus apps
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Adicionando o repositório remoto do Heroku</h2>
+		<p>
+			Após isto, basta adicionar em seu repositório Git uma nova <code>remote</code>
+		</p>
+
+		<p class="next">
+			Para fazer isto basta: <br>
+			<code>git remote add heroku https://git.heroku.com/myapp.git</code>
+		</p>
+		<p class="next">
+			<code>git push heroku</code>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Configurando o domínio personalizado</h2>
+	</section>
+
+	<section class="slide">
+
+		
+		Addons Heroku
+		PointDNS
+
+
+		$ heroku addons
+
+		RegistroBR
+		DNS
+
+		heroku domains --app mulheres-tech-day
+	</section>
+
+	<section class="slide">
+		<h2>Referências</h2>
+		<ul>
+			<li>Video do Zeno https://www.youtube.com/watch?v=EI99oZI3nKY</li>
+			<li>http://www.devmedia.com.br/primeiros-passos-em-paas-com-heroku/29465</li>
+			<li>https://devcenter.heroku.com/articles/pointdns#provisioning-the-add-on</li>
+			<li>https://devcenter.heroku.com/articles/custom-domains</li>
+			<li>https://github.com/braziljs/conf-boilerplate/blob/master/README-pt.md</li>
+		</ul>
+	</section>
+
 	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		<a href="https://github.com/vanessametonini/mytalks/tree/master/fisl/17/heroku-confboilerplate">Fork me on GitHub</a>
 	</p>
 	<!--
 		To hide progress bar from entire presentation
