@@ -42,6 +42,10 @@
   line-height: 70px;
   padding: 0 80px;
 }
+.slide ol li,
+.slide ul li {
+  text-indent: 0;
+}
 #picture h2 {
   color: #FFF;
 }
