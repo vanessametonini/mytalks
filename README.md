@@ -4,7 +4,7 @@ You can also find another presentations in my [Slideshare](http://www.slideshare
 
 
 ##17º Fórum Internacional de Software Livre (FISL) 2016
-**Faça o site do seu evento com Heroku + Conf-boilerplate<**  
+**Faça o site do seu evento com Heroku + Conf-boilerplate**  
 [Repository] (https://github.com/vanessametonini/mytalks/tree/master/fisl/17/heroku-confboilerplate)  
 [Public presentation](http://vanessametonini.github.io/mytalks)  
 
