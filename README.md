@@ -5,7 +5,7 @@ You can also find another presentations in my [Slideshare](http://www.slideshare
 
 ## 17º Fórum Internacional de Software Livre (FISL) 2016
 **Faça o site do seu evento com Heroku + Conf-boilerplate**  
-[Repository] (https://github.com/vanessametonini/mytalks/tree/master/fisl/17/heroku-confboilerplate)  
+[Repository](https://github.com/vanessametonini/mytalks/tree/master/fisl/17/heroku-confboilerplate)  
 [Public presentation](http://vanessametonini.github.io/mytalks)  
 
 
@@ -29,7 +29,7 @@ You can also find another presentations in my [Slideshare](http://www.slideshare
 
 ## 15º Fórum Internacional de Software Livre (FISL) 2014
 **Rodada Hacker: Internet, Web?! O que são?**  
-[Repository] (https://github.com/vanessametonini/mytalks/tree/master/fisl/rodada-hacker/lt-internet-web)  
+[Repository](https://github.com/vanessametonini/mytalks/tree/master/fisl/rodada-hacker/lt-internet-web)  
 [Public presentation](http://www.vanessametonini.com.br/fisl/rodada-hacker/lt-internet-web/)  
 
 
