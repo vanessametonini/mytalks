@@ -2,29 +2,37 @@
 @yellow: rgb(251,187,9);
 @dark-orange: rgb(233,92, 34);
 @light-orange: rgb(252,117,43);
+@title: #861847;
+@dark-gray: #333;
+
+@dark-pink: #f3214e;
+
+
 
 #cover {
 
-	background: @blue;
 	padding: 0;
 
 	h2 {
-		color:#FFF;
+		color: @title;
 		font-size:70px;
 		padding: 125px 100px 10px;
 		text-align:center;
+		text-shadow: 2px 2px 0px white;
+		width: 70%;
 	}
 
 	p {
 		margin:10px 0 0;
 		text-align:center;
-		color:#FFF;
+		color: @title;
 		font-style:italic;
 		font-size: 20px;
 		line-height: 30px;
+		width: 70%;
 
 		a {
-			color: white;
+			color: @dark-gray;
 			font-weight: bold;
 			font-style: normal;
 			text-decoration: none !important;
@@ -32,27 +40,25 @@
 	}
 }
 
-.fisl-logo {
-	background: @yellow;
-	bottom: 0;
-	padding: 20px 0;
-	position: absolute;
-	text-align: center;
-	width: 100%;
+.mnt-cover div {
+	background: url(pictures/mnt-cover.png);
+    height: 100%;
+    background-size: cover;
+    background-position-x: 50%;
 }
 
 .slide {
 
 	h2 {
-		color: @dark-orange;
+		color: @dark-pink;
 	}
 
 	h2.shout.shrink {
-		color: @blue;
+		color: @title;
 	}
 
 	p.shout {
-		color: @dark-orange;
+		color: @dark-pink;
 		font-size: 52px;
 		line-height: 70px;
 		padding: 0 80px;

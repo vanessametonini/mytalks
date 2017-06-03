@@ -1,43 +1,43 @@
 #cover {
-  background: #00b9c3;
   padding: 0;
 }
 #cover h2 {
-  color: #FFF;
+  color: #861847;
   font-size: 70px;
   padding: 125px 100px 10px;
   text-align: center;
+  text-shadow: 2px 2px 0px white;
+  width: 70%;
 }
 #cover p {
   margin: 10px 0 0;
   text-align: center;
-  color: #FFF;
+  color: #861847;
   font-style: italic;
   font-size: 20px;
   line-height: 30px;
+  width: 70%;
 }
 #cover p a {
-  color: white;
+  color: #333;
   font-weight: bold;
   font-style: normal;
   text-decoration: none !important;
 }
-.fisl-logo {
-  background: #fbbb09;
-  bottom: 0;
-  padding: 20px 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+.mnt-cover div {
+  background: url(pictures/mnt-cover.png);
+  height: 100%;
+  background-size: cover;
+  background-position-x: 50%;
 }
 .slide h2 {
-  color: #e95c22;
+  color: #f3214e;
 }
 .slide h2.shout.shrink {
-  color: #00b9c3;
+  color: #861847;
 }
 .slide p.shout {
-  color: #e95c22;
+  color: #f3214e;
   font-size: 52px;
   line-height: 70px;
   padding: 0 80px;
