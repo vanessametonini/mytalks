@@ -1,0 +1,25 @@
+{
+  "name": "my-talks-vanessa",
+  "version": "1.0.0",
+  "description": "Presentations made by mr",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessametonini/mytalks.git"
+  },
+  "author": "Vanessa Me Tonini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessametonini/mytalks/issues"
+  },
+  "homepage": "https://github.com/vanessametonini/mytalks#readme",
+  "dependencies": {
+    "shower": "^2.7.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
